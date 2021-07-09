@@ -47,7 +47,7 @@ const Scan = ({navigation}) => {
         </View>
         <Image
           source={require('../assets/loading-34.gif')}
-          style={{left: '21.5%', height: '25%', width: '60%', top: 100}}
+          style={{left: '19.5%', height: '25%', width: '60%', top: 100}}
         />
         <Text style={{left: '23%', top: '17%', fontSize: 15}}>
           Tracks:10 Albums:33 Artists:20

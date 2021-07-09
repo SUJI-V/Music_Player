@@ -94,6 +94,7 @@ const Recent = ({navigation}) => {
         </View>
       </Modal>
 
+
       <View>
         <Image
           source={require('../../assets/bg4.jpg')}
@@ -152,7 +153,7 @@ const Recent = ({navigation}) => {
                 onPress={() => navigation.navigate('Ads')}
               />
               <IconM name="search" size={30} color="#fff" />
-            </View>
+           </View>
           </View>
         </View>
 
