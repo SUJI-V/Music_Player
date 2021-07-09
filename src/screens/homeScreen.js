@@ -192,94 +192,69 @@ const HomeScreen = () => {
         </View>
       </View>
 
-      <KeyboardAvoidingView
-        behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
-        style={styles.containerM}>
-        <Modal visible={modalOpen} animationType="slide" transparent={true}>
+      <Modal visible={modalOpen} animationType="slide" transparent={true}>
+        <TouchableOpacity
+          style={styles.ModalRow1}
+          onPress={() => setModalOpen(false)}></TouchableOpacity>
+        <View style={styles.ModalRow2}>
           <TouchableOpacity
-            style={styles.ModalRow1}
+            style={{height: '100%', width: '5%'}}
             onPress={() => setModalOpen(false)}></TouchableOpacity>
-          <View style={styles.ModalRow2}>
-            <TouchableOpacity
-              style={{height: '100%', width: '5%'}}
-              onPress={() => setModalOpen(false)}></TouchableOpacity>
 
+          <View
+            style={{
+              height: '100%',
+              width: '90%',
+              backgroundColor: '#ffffff',
+          
+            }}>
             <View
               style={{
-                height: '100%',
-                width: '90%',
-                backgroundColor: '#ffffff',
+                height: '33%',
+                width: '100%',
+                justifyContent: 'center',
+                paddingLeft: '3%',
               }}>
+              <Text style={{fontSize: 20, fontWeight: 'bold'}}>
+                Create new playlist
+              </Text>
+            </View>
+            <View
+              style={{
+                height: '33%',
+                width: '100%',
+                ustifyContent: 'center',
+                alignItems: 'center',
+              }}>
+              <TextInput
+                style={{
+                  height: '100%',
+                  width: '90%',
+                  borderBottomWidth: 1,
+
+                  borderBottomColor: '#f4ce5e',
+                }}
+                placeholder={'New list 1'}></TextInput>
+            </View>
+            <View
+              style={{
+                height: '34%',
+                width: '100%',
+                flexDirection: 'row',
+                alignItems: 'flex-end',
+              }}>
+              <View style={{height: '70%', width: '50%'}}></View>
               <View
                 style={{
-                  height: '33%',
-                  width: '100%',
-                  justifyContent: 'center',
-                  paddingLeft: '3%',
-                }}>
-                <Text style={{fontSize: 20, fontWeight: 'bold'}}>
-                  Create new playlist
-                </Text>
-              </View>
-              <View
-                style={{
-                  height: '33%',
-                  width: '100%',
-                  ustifyContent: 'center',
+                  height: '70%',
+                  width: '25%',
                   alignItems: 'center',
+                  justifyContent: 'center',
                 }}>
-                <TextInput
-                  style={{
-                    height: '100%',
-                    width: '90%',
-                    borderBottomWidth: 1,
-                    borderBottomColor: '#f4ce5e',
-                  }}
-                  placeholder={'New list 1'}></TextInput>
-              </View>
-              <View
-                style={{
-                  height: '34%',
-                  width: '100%',
-                  flexDirection: 'row',
-                  alignItems: 'flex-end',
-                }}>
-                <View style={{height: '70%', width: '50%'}}></View>
-                <View
-                  style={{
-                    height: '70%',
-                    width: '25%',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                  }}>
-                  <Pressable
-                    onPress={() => {
-                      setModalOpen(false);
-                      ToastAndroid.show('Canceled', ToastAndroid.SHORT);
-                    }}>
-                    <Text
-                      style={{
-                        fontSize: 16,
-                        fontWeight: 'normal',
-                        color: '#f4ce5e',
-                      }}>
-                      CANCEL
-                    </Text>
-                  </Pressable>
-                </View>
-                <TouchableOpacity
+                <Pressable
                   onPress={() => {
                     setModalOpen(false);
-                    ToastAndroid.show(
-                      'New Playlist Created',
-                      ToastAndroid.SHORT,
-                    );
-                  }}
-                  style={{
-                    height: '70%',
-                    width: '25%',
-                    alignItems: 'center',
-                    justifyContent: 'center',
+                    ToastAndroid.show('Canceled', ToastAndroid.SHORT);
                   }}>
                   <Text
                     style={{
@@ -287,22 +262,42 @@ const HomeScreen = () => {
                       fontWeight: 'normal',
                       color: '#f4ce5e',
                     }}>
-                    OK
+                    CANCEL
                   </Text>
-                </TouchableOpacity>
+                </Pressable>
               </View>
+              <TouchableOpacity
+                onPress={() => {
+                  setModalOpen(false);
+                  ToastAndroid.show('New Playlist Created', ToastAndroid.SHORT);
+                }}
+                style={{
+                  height: '70%',
+                  width: '25%',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                }}>
+                <Text
+                  style={{
+                    fontSize: 16,
+                    fontWeight: 'normal',
+                    color: '#f4ce5e',
+                  }}>
+                  OK
+                </Text>
+              </TouchableOpacity>
             </View>
-
-            <TouchableOpacity
-              style={{height: '100%', width: '5%'}}
-              onPress={() => setModalOpen(false)}></TouchableOpacity>
           </View>
 
           <TouchableOpacity
-            style={styles.ModalRow3}
+            style={{height: '100%', width: '5%'}}
             onPress={() => setModalOpen(false)}></TouchableOpacity>
-        </Modal>
-      </KeyboardAvoidingView>
+        </View>
+
+        <TouchableOpacity
+          style={styles.ModalRow3}
+          onPress={() => setModalOpen(false)}></TouchableOpacity>
+      </Modal>
 
       <View style={styles.row3}>
         <TouchableOpacity
