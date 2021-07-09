@@ -13,7 +13,7 @@ const Drive = ({navigation}) => {
       <AntDesign
         name="arrowleft"
         size={25}
-        style={{left: 10, top: 15,color:"#fff"}}
+        style={{left: 10, top: 15, color: '#fff'}}
         onPress={() => navigation.goBack()}
       />
       <Image
@@ -37,9 +37,9 @@ const Drive = ({navigation}) => {
             borderColor: '#fff',
             width: '25%',
             paddingLeft: 25,
-            height:35,
-            paddingTop:7,
-            right:"60%"
+            height: 35,
+            paddingTop: 7,
+            right: '60%',
           }}
           onPress={() => navigation.navigate('Home')}>
           <Text>Cancel</Text>
@@ -52,7 +52,7 @@ const Drive = ({navigation}) => {
             paddingLeft: 25,
             backgroundColor: '#7797F5',
             left: '80%',
-            paddingTop:7
+            paddingTop: 7,
           }}
           onPress={() => navigation.navigate('Library')}>
           <Text>OK</Text>
