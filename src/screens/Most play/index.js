@@ -14,123 +14,6 @@ import {
   TouchableOpacity,
 } from 'react-native';
 
-const styles = StyleSheet.create({
-  container: {
-    paddingTop: '0.1%',
-    paddingBottom: '0.1%',
-    paddingLeft: '8%',
-    borderBottomWidth: 1,
-    borderColor: 'grey',
-    flexDirection: 'row',
-    alignItems: 'flex-start',
-  },
-  fileNameView: {
-    marginLeft: '4%',
-    marginTop:"2%",
-    flexDirection: 'column',
-  },
-  fileName: {
-    color: 'white',
-    marginTop: '2.5%',
-    marginBottom: '2.5%',
-    fontSize: 18,
-  },
-  fileName2: {
-    fontSize: 15,
-    color: 'white',
-  },
-  audioImage: {
-    height: 50,
-    width: 50,
-
-    marginTop: '2.5%',
-    marginBottom: '2.5%',
-  },
-  dotIcon: {
-    padding: 10,
-    marginLeft: '89%',
-    marginTop: '2.5%',
-    color: 'white',
-    width: '15%',
-    position: 'absolute',
-  },
-  modalViewTop: {
-    height: '60%',
-    backgroundColor: 'rgba(52, 52, 52, 0.8)',
-    flexWrap: 'wrap',
-  },
-  modalViewBottom: {
-  flexWrap: 'wrap',
-    height: '40%',
-    backgroundColor: '#376f8a',
-    justifyContent:"center",
-    alignContent:"center",
-    alignItems:"center",
-    borderWidth:1,
-    borderColor:"transparent",
-  },
-  ModalHeaderView: {
-  justifyContent:"center",
-    backgroundColor: '#376f8a',
-    borderWidth:1,
-    borderColor:"transparent",
-  },
-  ModalHeaderText: {
-    fontSize: 21,
-    color: 'white',
-    borderWidth:1,
-    borderColor:"transparent",
-    marginBottom:"7%",
-  },
-  modalIconsContainer: {
-    flexWrap: 'wrap',
-    flexDirection: 'row',
-    alignItems:"center",
-    justifyContent: "center",
-    alignContent:"space-between",
-    margin: '1%',
-   borderWidth:1,
-   borderColor:"transparent",
-
-  },
-  IconsRow: {
-    backgroundColor: '#376f8a',
-    marginLeft: '4%',
-   marginRight: '4%',
-    alignItems: 'center',
-    alignContent:"center",
-   justifyContent: 'space-between',
-  },
-  modalIcon: {
-    padding: '5.5%',
-    color: 'white',
-  },
-  iconText: {
-    color: 'white',
-  },
-  IconTouchableOpacity: {
-    alignItems: 'center',
-  },
-  PlayerView:{ 
-    width:"100%",
-    height:"10%",
-    backgroundColor: '#376f8aaa',
-    justifyContent:"center",
-    alignContent:"center",
-    alignItems:"center",
-    borderTopWidth:1,
-    borderColor:"#ffffffae",
-},
-Player:{
-height:"80%",
-width:"95%",
-//borderRadius:25,
-    justifyContent:"space-around",
-    alignContent:"space-around",
-   alignItems:"center",
-   flexDirection:"row",
-},
-});
 
 const Play = ({navigation}) => {
   const [modalOpen, setModalOpen] = useState(false);
@@ -226,9 +109,9 @@ const Play = ({navigation}) => {
     backgroundColor: '#376f8aef'}}>
                <Icon1 name="arrowleft" size={25} style={{color: '#fff'}} onPress={() => navigation.goBack()}/>
                 <Text style={{color:"#fff", fontFamily: "italic", fontWeight: "bold", fontSize: 20,marginTop:"1%" }}>Most Play</Text>
-<View style={{height:"100%",width:"60%",flexDirection:"row", flexWrap:"wrap", alignContent:"center",justifyContent:"flex-end",}}>
-<View style={{height:"100%",width:"30%",flexDirection:"row", flexWrap:"wrap",alignItems:"center", alignContent:"center",justifyContent:"space-between", }}>
-                <IconM name="card-giftcard" size={30} color="#fff"  onPress={() => navigation.navigate('Ads')} />
+<View style={{height:"100%",width:"40%",flexDirection:"row", flexWrap:"wrap", alignContent:"center",justifyContent:"flex-end",}}>
+<View style={{height:"100%",width:"45%",flexDirection:"row", flexWrap:"wrap",alignItems:"center", alignContent:"center",justifyContent:"space-between", }}>
+                <Icon1 name="gift" size={30} color="#fff"  onPress={() => navigation.navigate('Ads')} />
                 <IconM name="search" size={30} color="#fff"  />
                 </View>
                 </View>
@@ -469,3 +352,121 @@ const Play = ({navigation}) => {
 };
 
 export default Play;
+
+const styles = StyleSheet.create({
+  container: {
+    paddingTop: '0.1%',
+    paddingBottom: '0.1%',
+    paddingLeft: '8%',
+    borderBottomWidth: 1,
+    borderColor: 'grey',
+    flexDirection: 'row',
+    alignItems: 'flex-start',
+  },
+  fileNameView: {
+    marginLeft: '4%',
+    marginTop:"2%",
+    flexDirection: 'column',
+  },
+  fileName: {
+    color: 'white',
+    marginTop: '2.5%',
+    marginBottom: '2.5%',
+    fontSize: 18,
+  },
+  fileName2: {
+    fontSize: 15,
+    color: 'white',
+  },
+  audioImage: {
+    height: 50,
+    width: 50,
+
+    marginTop: '2.5%',
+    marginBottom: '2.5%',
+  },
+  dotIcon: {
+    padding: 10,
+    marginLeft: '89%',
+    marginTop: '2.5%',
+    color: 'white',
+    width: '15%',
+    position: 'absolute',
+  },
+  modalViewTop: {
+    height: '60%',
+    backgroundColor: 'rgba(52, 52, 52, 0.8)',
+    flexWrap: 'wrap',
+  },
+  modalViewBottom: {
+  flexWrap: 'wrap',
+    height: '40%',
+    backgroundColor: '#376f8a',
+    justifyContent:"center",
+    alignContent:"center",
+    alignItems:"center",
+    borderWidth:1,
+    borderColor:"transparent",
+  },
+  ModalHeaderView: {
+  justifyContent:"center",
+    backgroundColor: '#376f8a',
+    borderWidth:1,
+    borderColor:"transparent",
+  },
+  ModalHeaderText: {
+    fontSize: 21,
+    color: 'white',
+    borderWidth:1,
+    borderColor:"transparent",
+    marginBottom:"7%",
+  },
+  modalIconsContainer: {
+    flexWrap: 'wrap',
+    flexDirection: 'row',
+    alignItems:"center",
+    justifyContent: "center",
+    alignContent:"space-between",
+    margin: '1%',
+   borderWidth:1,
+   borderColor:"transparent",
+
+  },
+  IconsRow: {
+    backgroundColor: '#376f8a',
+    marginLeft: '4%',
+   marginRight: '4%',
+    alignItems: 'center',
+    alignContent:"center",
+   justifyContent: 'space-between',
+  },
+  modalIcon: {
+    padding: '5.5%',
+    color: 'white',
+  },
+  iconText: {
+    color: 'white',
+  },
+  IconTouchableOpacity: {
+    alignItems: 'center',
+  },
+  PlayerView:{ 
+    width:"100%",
+    height:"10%",
+    backgroundColor: '#376f8aaa',
+    justifyContent:"center",
+    alignContent:"center",
+    alignItems:"center",
+    borderTopWidth:1,
+    borderColor:"#ffffffae",
+},
+Player:{
+height:"80%",
+width:"95%",
+//borderRadius:25,
+    justifyContent:"space-around",
+    alignContent:"space-around",
+   alignItems:"center",
+   flexDirection:"row",
+},
+});
