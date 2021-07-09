@@ -12,6 +12,11 @@ import IconM from 'react-native-vector-icons/MaterialIcons';
 import IconA from 'react-native-vector-icons/AntDesign';
 const Widget = ({navigation}) => {
   return (
+    <>
+    <Image
+      style={{height: '100%', width: '100%', position: 'absolute'}}
+      source={require('../assets/bg3.jpg')}
+    />
     <View style={{flex: 1, backgroundColor: '#376f8aaa'}}>
      <View style={{ height:"8%",
     flexDirection:"row",
@@ -19,7 +24,8 @@ const Widget = ({navigation}) => {
     alignContent:"center",
     justifyContent:"space-around",
     alignItems:"center",
-    backgroundColor: '#376f8aef'}}>
+    backgroundColor: '#376f8aef',
+    opacity:.7}}>
                 <IconA  name="arrowleft" size={30} color="#fff"  style={{width:"10%",}}  onPress={() => navigation.goBack()} />
                 <Text style={{color:"#fff", fontFamily: "italic", fontWeight: "bold", fontSize: 20,marginTop:"1%" }}>Widget</Text>
 <View style={{height:"100%",width:"60%",flexDirection:"row", flexWrap:"wrap", alignContent:"center",justifyContent:"flex-end",}}>
@@ -71,6 +77,7 @@ const Widget = ({navigation}) => {
         </View>
       </View>
     </View>
+    </>
   );
 };
 const styles = StyleSheet.create({

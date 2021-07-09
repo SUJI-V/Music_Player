@@ -39,27 +39,14 @@ const Main = ({ navigation }) => {
     }
     return (
 
-        <Drawer.Navigator initialRouteName=""  headerMode={false}>
+        <Drawer.Navigator initialRouteName=""  headerMode={false} style={{backgroundColor:"grey"}}>
             <Drawer.Screen name="Home" component={HomeStack} options={{
                 headerLeft: () => (
                     <AntDesign name="search1" size={40} width={60} height={60} color="black" backgroundColor="red" onPress={() => navigation.navigate('stack')}></AntDesign>
                 )
             }} />
             <Drawer.Screen name="Scan Libraries" component={Scan} options={{
-                 headerLeft: () => (
-                    <Icon.Button name="lens" size={20} width={60} height={60} style={{ marginRight: 20 }} color="black" backgroundColor="#fff" onPress={() => navigation.navigate('default')}></Icon.Button>
-                )
-            }} />
-            <Drawer.Screen name="Orders" component={Equalizer} options={{
-                title: "Equalizer", headerLeft: () => (
-                    <Icon.Button name="menu-unfold" size={40} width={60} height={60} color="black" backgroundColor="#fff" onPress={() => navigation.openDrawer()}></Icon.Button>
-                )
-            }} />
-            <Drawer.Screen name="Shuffle" component={HomeScreen} options={{
-                headerLeft: () => (
-                        onPress={clickHandler}
-                        )
-            }} />
+               }} />
             <Drawer.Screen name="Theme" component={Themes} options={{
                 headerLeft: () => (
                     <Icon.Button name="search2" size={40} width={60} height={60} color="black" backgroundColor="#fff" onPress={() => navigation.openDrawer()}></Icon.Button>

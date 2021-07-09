@@ -230,8 +230,8 @@ const Recent = ({navigation}) => {
                 <Text style={{color:"#fff", fontFamily: "italic", fontWeight: "bold", fontSize: 20,marginTop:"1%" }}>Recent Play</Text>
 <View style={{height:"100%",width:"60%",flexDirection:"row", flexWrap:"wrap", alignContent:"center",justifyContent:"flex-end",}}>
 <View style={{height:"100%",width:"30%",flexDirection:"row", flexWrap:"wrap",alignItems:"center", alignContent:"center",justifyContent:"space-between", }}>
-                <IconM name="card-giftcard" size={30} color="#fff"  onPress={() => navigation.navigate('Ads')} />
-                <IconM name="search" size={30} color="#fff"  />
+                <IconM name="card-giftcard" size={25} color="#fff"  onPress={() => navigation.navigate('Ads')} />
+                <IconM name="search" size={25} color="#fff"  />
                 </View>
                 </View>
             </View>

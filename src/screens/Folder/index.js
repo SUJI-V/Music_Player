@@ -1,10 +1,17 @@
 import React from 'react';
-import {View, Text, StyleSheet} from 'react-native';
+import {View, Text, StyleSheet,Image,ToastAndroid} from 'react-native';
 import Icon1 from 'react-native-vector-icons/Entypo';
 import IconM from 'react-native-vector-icons/MaterialIcons';
 import AntDesign from 'react-native-vector-icons/AntDesign';
+import Iconf from 'react-native-vector-icons/Foundation'
+import IconF from 'react-native-vector-icons/FontAwesome';
 const Folder = ({navigation}) => {
   return (
+    <>
+    <Image
+      style={{height: '100%', width: '100%', position: 'absolute'}}
+      source={require('../../assets/bg3.jpg')}
+    />
     <View style={styles.container}>
       <View
         style={{
@@ -32,7 +39,7 @@ const Folder = ({navigation}) => {
             marginTop: '1%',
             right: '25%',
           }}>
-          Folder
+          FOLDER
         </Text>
         <View
           style={{
@@ -55,23 +62,24 @@ const Folder = ({navigation}) => {
             }}>
             <AntDesign
               name="search1"
-              size={30}
+              size={25}
               color="#fff"
+              style={{right:"30%"}}
               onPress={() => navigation.goBack()}
             />
-            <AntDesign
-              name="gift"
-              size={30}
+            <Icon1
+              name="dots-three-vertical"
+              size={25}
               color="#fff"
-              style={{left: '10%'}}
+              style={{right: '5%'}}
               onPress={() => navigation.navigate('Ads')}
             />
           </View>
         </View>
       </View>
       <View style={{marginTop: '5%'}}>
-        <Icon1
-          name="folder"
+        <IconF
+          name="folder-open"
           size={28}
           style={{
             left: '5%',
@@ -79,22 +87,23 @@ const Folder = ({navigation}) => {
             backgroundColor: 'grey',
             width: '10%',
             paddingLeft: '1.5%',
+            color:"#fff"
           }}
           onPress={() => navigation.navigate('Recent')}
         />
-        <Text style={{left: '20%', bottom: '21%', fontSize: 17}}>audio</Text>
-        <Text style={{left: '20%', bottom: '25%'}}>
+        <Text style={{left: '20%', bottom: '21%', fontSize: 17,color:"#fff"}}>audio</Text>
+        <Text style={{left: '20%', bottom: '25%',color:"#fff"}}>
           /storage/emu...Xender/audio
         </Text>
         <Icon1
           name="dots-three-vertical"
           size={20}
-          style={{left: '90%', bottom: '60%'}}
+          style={{left: '90%', bottom: '60%',color:"#fff"}}
         />
       </View>
       <View>
-        <Icon1
-          name="folder"
+        <IconF
+          name="folder-open"
           size={28}
           style={{
             left: '5%',
@@ -102,22 +111,24 @@ const Folder = ({navigation}) => {
             backgroundColor: 'grey',
             width: '10%',
             paddingLeft: '1.5%',
+            color:"#fff"
+
           }}
           onPress={() => navigation.navigate('Favorite')}
         />
-        <Text style={{left: '20%', bottom: '21%', fontSize: 17}}>Download</Text>
-        <Text style={{left: '20%', bottom: '25%'}}>
+        <Text style={{left: '20%', bottom: '21%', fontSize: 17,color:"#fff"}}>Download</Text>
+        <Text style={{left: '20%', bottom: '25%',color:"#fff"}}>
           /storage/emu...Xender/audio
         </Text>
         <Icon1
           name="dots-three-vertical"
           size={20}
-          style={{left: '90%', bottom: '60%'}}
+          style={{left: '90%', bottom: '60%',color:"#fff"}}
         />
       </View>
       <View>
-        <Icon1
-          name="folder"
+        <IconF
+          name="folder-open"
           size={28}
           style={{
             left: '5%',
@@ -125,22 +136,24 @@ const Folder = ({navigation}) => {
             backgroundColor: 'grey',
             width: '10%',
             paddingLeft: '1.5%',
+            color:"#fff"
+
           }}
           onPress={() => navigation.navigate('Play')}
         />
-        <Text style={{left: '20%', bottom: '21%', fontSize: 17}}>Music</Text>
-        <Text style={{left: '20%', bottom: '25%'}}>
+        <Text style={{left: '20%', bottom: '21%', fontSize: 17,color:"#fff"}}>Music</Text>
+        <Text style={{left: '20%', bottom: '25%',color:"#fff"}}>
           /storage/emu...Xender/audio
         </Text>
         <Icon1
           name="dots-three-vertical"
           size={20}
-          style={{left: '90%', bottom: '60%'}}
+          style={{left: '90%', bottom: '60%',color:"#fff"}}
         />
       </View>
       <View>
-        <Icon1
-          name="folder"
+        <IconF
+          name="folder-open"
           size={28}
           style={{
             left: '5%',
@@ -148,22 +161,55 @@ const Folder = ({navigation}) => {
             backgroundColor: 'grey',
             width: '10%',
             paddingLeft: '1.5%',
+            color:"#fff"
+
           }}
           onPress={() => navigation.navigate('Whatsapp')}
         />
-        <Text style={{left: '20%', bottom: '21%', fontSize: 17}}>
+        <Text style={{left: '20%', bottom: '21%', fontSize: 17,color:"#fff"}}>
           Whatsapp Audio
         </Text>
-        <Text style={{left: '20%', bottom: '25%'}}>
+        <Text style={{left: '20%', bottom: '25%',color:"#fff"}}>
           /storage/emu...Xender/audio
         </Text>
         <Icon1
           name="dots-three-vertical"
           size={20}
-          style={{left: '90%', bottom: '60%'}}
+          style={{left: '90%', bottom: '60%',color:"#fff"}}
         />
       </View>
+      <View
+          style={{
+            width: 65,
+            height: 65,
+            borderRadius: 50,
+            top:"22%",
+            left:"80%",
+            backgroundColor: '#F4CE5E',
+            justifyContent: 'center',
+            alignContent: 'center',
+            alignItems: 'center',
+          }}>
+          <Icon1
+            name="shuffle"
+            size={30}
+            color="#fff"
+            onPress={() =>
+              ToastAndroid.show('Current Queue Shuffled!', ToastAndroid.SHORT)
+            }
+          />
+        </View>
+      <View style={styles.PlayerView}>
+          <View style={styles.Player}>
+            <Iconf name="music" size={30} color="#fff" />
+            <Text style={{color: '#fff', fontSize: 15}}>03-uyire.mp3</Text>
+            <IconM name="play-arrow" size={30} color="#fff" />
+            <IconM name="fast-forward" size={30} color="#fff" />
+            <IconM name="queue-music" size={30} color="#fff" />
+          </View>
+        </View>
     </View>
+    </>
   );
 };
 
@@ -199,6 +245,26 @@ const styles = StyleSheet.create({
   Icon1: {
     left: '110%',
     bottom: '170%',
+  },
+  PlayerView: {
+      top:"23%",
+    width: '100%',
+    height: '10%',
+    backgroundColor: '#376f8aaa',
+    justifyContent: 'center',
+    alignContent: 'center',
+    alignItems: 'center',
+    borderTopWidth: 1,
+    borderColor: '#ffffffae',
+  },
+  Player: {
+    height: '80%',
+    width: '95%',
+    //borderRadius:25,
+    justifyContent: 'space-around',
+    alignContent: 'space-around',
+    alignItems: 'center',
+    flexDirection: 'row',
   },
 });
 
