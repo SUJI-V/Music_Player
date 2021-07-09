@@ -180,7 +180,7 @@ OK
  <View style={styles.row3}> 
  <TouchableOpacity style={styles.Tile4} onPress={() => navigation.navigate('Library')} >
         <View style={styles.InnerTilesBox}>
-        <Icon name="menu" size={30} color="white"  />
+        <Icon name="menu" size={30} color="white"  />\
 <Text style={styles.TilesText}>
     DEFAULT LIST
 </Text>
