@@ -484,16 +484,19 @@ const styles = StyleSheet.create({
   ModalRow1: {
     width: '100%',
     height: '30%',
+    //position:"absolute",
   },
   ModalRow2: {
     width: '100%',
-    height: '30%',
+    height: 200,
 
     flexDirection: 'row',
   },
   ModalRow3: {
     width: '100%',
-    height: '40%',
+    height: '45%',
+    
+   // position:"absolute",
   },
   row3: {
     height: '20%',
