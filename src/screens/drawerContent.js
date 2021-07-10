@@ -19,12 +19,15 @@ export function DrawerContent(props) {
         source={require('../assets/bg4.jpg')} />
       </Drawer.Section>
       <Drawer.Section
+
+
         style={{
           height: '100%',
           paddingTop: '25%',
           opacity: 0.5,
           backgroundColor: '#6FB2DC',
         }}>
+
         <DrawerItem
           onPress={() => {
             props.navigation.navigate('Home');
@@ -57,7 +60,7 @@ export function DrawerContent(props) {
           onPress={() => {
             props.navigation.navigate('Timer');
           }}
-          icon={({color, size}) => <Icon1 name="car" size={20} />}
+          icon={({color, size}) => <Icon name="power-sleep" size={20} />}
           label="Sleep Timer"
         />
         <DrawerItem

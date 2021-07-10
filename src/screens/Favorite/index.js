@@ -74,14 +74,14 @@ const Fav = ({navigation}) => {
                 size={25}
                 color="#fff"
                 style={{right: '20%'}}
-                onPress={() => navigation.goBack()}
+                onPress={() => navigation.navigate('Library')}
               />
               <Icon
                 name="dots-three-vertical"
                 size={25}
                 color="#fff"
                 style={{left: '6%'}}
-                onPress={() => navigation.navigate('Ads')}
+                onPress={() => navigation.navigate('Settings')}
               />
             </View>
 
