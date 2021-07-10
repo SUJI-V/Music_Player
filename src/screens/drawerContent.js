@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Text} from 'react-native';
+import {View, Text, Image} from 'react-native';
 import {DrawerContentScrollView, DrawerItem} from '@react-navigation/drawer';
 import {Drawer} from 'react-native-paper';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
@@ -8,8 +8,26 @@ import Icon2 from 'react-native-vector-icons/SimpleLineIcons';
 export function DrawerContent(props) {
   return (
     <View>
+      <Image
+        style={{position: 'absolute', width: '100%', height: '100%'}}
+        source={require('../assets/bg4.jpg')}
+      />
+      <Drawer.Section style={{backgroundColor: 'grey',position: "absolute",width:"100%",height:"10%",opacity: .6,}}>
+      <Text style={{color:"red",fontStyle:"italic",fontSize:40,}}>Music Player</Text>
+        <Image
+                style={{position: 'absolute', width: '100%', height: '100%'}}
+        source={require('../assets/bg4.jpg')} />
+      </Drawer.Section>
       <Drawer.Section
-        style={{backgroundColor: '#376f8a88', height: '100%', paddingTop: '10%'}}>
+
+
+        style={{
+          height: '100%',
+          paddingTop: '25%',
+          opacity: 0.5,
+          backgroundColor: '#6FB2DC',
+        }}>
+
         <DrawerItem
           onPress={() => {
             props.navigation.navigate('Home');
