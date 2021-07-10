@@ -69,7 +69,7 @@ const Folder = ({navigation}) => {
             />
             <Icon1
               name="dots-three-vertical"
-              size={25}
+              size={20}
               color="#fff"
               style={{right: '5%'}}
               onPress={() => navigation.navigate('Ads')}
@@ -89,9 +89,9 @@ const Folder = ({navigation}) => {
             paddingLeft: '1.5%',
             color:"#fff"
           }}
-          onPress={() => navigation.navigate('Recent')}
         />
-        <Text style={{left: '20%', bottom: '21%', fontSize: 17,color:"#fff"}}>audio</Text>
+        <Text style={{left: '20%', bottom: '21%', fontSize: 17,color:"#fff"}} onPress={() => navigation.navigate('Recent')}
+>audio</Text>
         <Text style={{left: '20%', bottom: '25%',color:"#fff"}}>
           /storage/emu...Xender/audio
         </Text>
@@ -114,9 +114,9 @@ const Folder = ({navigation}) => {
             color:"#fff"
 
           }}
-          onPress={() => navigation.navigate('Favorite')}
         />
-        <Text style={{left: '20%', bottom: '21%', fontSize: 17,color:"#fff"}}>Download</Text>
+        <Text style={{left: '20%', bottom: '21%', fontSize: 17,color:"#fff"}}onPress={() => navigation.navigate('Favorite')}
+>Download</Text>
         <Text style={{left: '20%', bottom: '25%',color:"#fff"}}>
           /storage/emu...Xender/audio
         </Text>
@@ -139,9 +139,9 @@ const Folder = ({navigation}) => {
             color:"#fff"
 
           }}
-          onPress={() => navigation.navigate('Play')}
         />
-        <Text style={{left: '20%', bottom: '21%', fontSize: 17,color:"#fff"}}>Music</Text>
+        <Text style={{left: '20%', bottom: '21%', fontSize: 17,color:"#fff"}} onPress={() => navigation.navigate('Play')}
+>Music</Text>
         <Text style={{left: '20%', bottom: '25%',color:"#fff"}}>
           /storage/emu...Xender/audio
         </Text>
@@ -164,9 +164,9 @@ const Folder = ({navigation}) => {
             color:"#fff"
 
           }}
-          onPress={() => navigation.navigate('Whatsapp')}
         />
-        <Text style={{left: '20%', bottom: '21%', fontSize: 17,color:"#fff"}}>
+        <Text style={{left: '20%', bottom: '21%', fontSize: 17,color:"#fff"}}onPress={() => navigation.navigate('Whatsapp')}
+>
           Whatsapp Audio
         </Text>
         <Text style={{left: '20%', bottom: '25%',color:"#fff"}}>

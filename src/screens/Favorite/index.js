@@ -69,7 +69,7 @@ const Fav = ({navigation}) => {
             />
             <Icon
               name="dots-three-vertical"
-              size={25}
+              size={20}
               color="#fff"
               style={{left: '6%'}}
               onPress={() => navigation.navigate('Ads')}
