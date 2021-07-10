@@ -1,9 +1,10 @@
 import React from 'react';
-import {View, Text, TouchableOpacity, Pressable,Image} from 'react-native';
+import {View, Text, TouchableOpacity, Pressable,Image,StyleSheet} from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import AntDesign from 'react-native-vector-icons/AntDesign';
-import Icon1 from 'react-native-vector-icons/MaterialIcons';
+import Iconf from 'react-native-vector-icons/Foundation'
 import Icon2 from 'react-native-vector-icons/Entypo';
+import IconA from 'react-native-vector-icons/MaterialIcons'
 const Recent = ({navigation}) => {
   return (
     <>
@@ -11,7 +12,7 @@ const Recent = ({navigation}) => {
       style={{height: '100%', width: '100%', position: 'absolute'}}
       source={require('../../assets/bg3.jpg')}
     />
-    <View style={{backgroundColor: 'skyblue', height: '100%',opacity:.7,}}>
+    <View style={{backgroundColor: 'skyblue', height: '100%',opacity:.7,justifyContent:"space-between"}}>
       <View   style={{
           height: '8%',
           flexDirection: 'row',
@@ -33,14 +34,14 @@ const Recent = ({navigation}) => {
           name="search1"
           size={25}
           color="#fff"
-          style={{top: -32, left: '80%'}}
+          style={{top: -32, left: '100%'}}
           onPress={() => navigation.goBack()}
         />
         <AntDesign
           name="gift"
           size={25}
           color="black"
-          style={{top: -57, left: '68%', color: '#fff'}}
+          style={{top: -57, left: '100%', color: '#fff'}}
           onPress={() => navigation.navigate('Ads')}
         />
         <Icon2
@@ -157,8 +158,38 @@ const Recent = ({navigation}) => {
           style={{left: '88%', bottom: '45%', color: '#fff'}}
         />
       </View>
+      <View style={styles.PlayerView}>
+          <View style={styles.Player}>
+            <Iconf name="music" size={30} color="#fff" />
+            <Text style={{color: '#fff', fontSize: 15}}>03-uyire.mp3</Text>
+            <IconA name="play-arrow" size={30} color="#fff" />
+            <IconA name="fast-forward" size={30} color="#fff" />
+            <IconA name="queue-music" size={30} color="#fff" />
+          </View>
+        </View>
     </View>
     </>
   );
 };
+const styles=StyleSheet.create({
+  PlayerView: {
+  width: '100%',
+  height: '10%',
+  backgroundColor: '#376f8aaa',
+  justifyContent: 'center',
+  alignContent: 'center',
+  alignItems: 'center',
+  borderTopWidth: 1,
+  borderColor: '#ffffffae',
+},
+Player: {
+  height: '80%',
+  width: '95%',
+  //borderRadius:25,
+  justifyContent: 'space-around',
+  alignContent: 'space-around',
+  alignItems: 'center',
+  flexDirection: 'row',
+},
+})
 export default Recent;
