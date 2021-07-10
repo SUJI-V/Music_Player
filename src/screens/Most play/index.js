@@ -111,8 +111,8 @@ const Play = ({navigation}) => {
                 <Text style={{color:"#fff", fontFamily: "italic", fontWeight: "bold", fontSize: 20,marginTop:"1%" }}>Most Play</Text>
 <View style={{height:"100%",width:"40%",flexDirection:"row", flexWrap:"wrap", alignContent:"center",justifyContent:"flex-end",}}>
 <View style={{height:"100%",width:"45%",flexDirection:"row", flexWrap:"wrap",alignItems:"center", alignContent:"center",justifyContent:"space-between", }}>
-                <Icon1 name="gift" size={30} color="#fff"  onPress={() => navigation.navigate('Ads')} />
-                <IconM name="search" size={30} color="#fff"  />
+                <Icon1 name="gift" size={25} color="#fff"  onPress={() => navigation.navigate('Ads')} />
+                <Icon1 name="search1" size={25} color="#fff"  />
                 </View>
                 </View>
             </View>

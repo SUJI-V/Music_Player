@@ -29,15 +29,15 @@ const Recent = ({navigation}) => {
         <Text style={{right: "30%", fontWeight: 'bold', top: -8, color: '#fff'}}>
           WHATSAPP
         </Text>
-        <Icon1
-          name="search"
+        <AntDesign
+          name="search1"
           size={25}
           color="#fff"
           style={{top: -32, left: '80%'}}
           onPress={() => navigation.goBack()}
         />
-        <Icon1
-          name="card-giftcard"
+        <AntDesign
+          name="gift"
           size={25}
           color="black"
           style={{top: -57, left: '68%', color: '#fff'}}
