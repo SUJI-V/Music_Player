@@ -12,14 +12,21 @@ const Recent = ({navigation}) => {
       source={require('../../assets/bg3.jpg')}
     />
     <View style={{backgroundColor: 'skyblue', height: '100%',opacity:.7,}}>
-      <View style={{backgroundColor: '#0890B6', height: '5%'}}>
-        <Icon
-          name="arrow-left"
+      <View   style={{
+          height: '8%',
+          flexDirection: 'row',
+          flexWrap: 'wrap',
+          alignContent: 'center',
+          justifyContent: 'space-around',
+          alignItems: 'center',
+          backgroundColor: '#376f8aef',}}>
+        <AntDesign
+          name="arrowleft"
           size={20}
-          style={{top: 10, left: 10, color: '#fff'}}
+          style={{top: 10, right: "10%", color: '#fff'}}
           onPress={() => navigation.goBack()}
         />
-        <Text style={{left: 50, fontWeight: 'bold', top: -8, color: '#fff'}}>
+        <Text style={{right: "30%", fontWeight: 'bold', top: -8, color: '#fff'}}>
           WHATSAPP
         </Text>
         <Icon1
@@ -53,7 +60,7 @@ const Recent = ({navigation}) => {
           <AntDesign
             name="barchart"
             size={30}
-            style={{left: 220, bottom: 27, color: '#fff'}}
+            style={{left: "70%", bottom: 27, color: '#fff'}}
           />
           <Icon2
             name="dots-three-vertical"
@@ -69,7 +76,7 @@ const Recent = ({navigation}) => {
           style={{top: 30, left: 10, color: '#fff'}}
         />
         <Text style={{left: 50, top: 10, color: '#fff'}}>Audio1.mp3</Text>
-        <AntDesign name="barchart" size={30} style={{left: 220, top: -10 , color:"#fff"}} />
+        <AntDesign name="barchart" size={30} style={{left: "70%", top: -10 , color:"#fff"}} />
         <Icon2
           name="dots-three-vertical"
           size={25}
@@ -86,7 +93,7 @@ const Recent = ({navigation}) => {
         <AntDesign
           name="barchart"
           size={30}
-          style={{left: 220, top: -20, color: '#fff'}}
+          style={{left: "70%", top: -20, color: '#fff'}}
         />
         <Icon2
           name="dots-three-vertical"
@@ -104,7 +111,7 @@ const Recent = ({navigation}) => {
         <AntDesign
           name="barchart"
           size={30}
-          style={{left: 220, top: -20, color: '#fff'}}
+          style={{left: "70%", top: -20, color: '#fff'}}
         />
         <Icon2
           name="dots-three-vertical"
@@ -122,7 +129,7 @@ const Recent = ({navigation}) => {
         <AntDesign
           name="barchart"
           size={30}
-          style={{left: 220, top: -20, color: '#fff'}}
+          style={{left: "70%", top: -20, color: '#fff'}}
         />
         <Icon2
           name="dots-three-vertical"
@@ -142,7 +149,7 @@ const Recent = ({navigation}) => {
         <AntDesign
           name="barchart"
           size={30}
-          style={{left: 220, top: -20, color: '#fff'}}
+          style={{left: "70%", top: -20, color: '#fff'}}
         />
         <Icon2
           name="dots-three-vertical"
@@ -154,5 +161,4 @@ const Recent = ({navigation}) => {
     </>
   );
 };
-
 export default Recent;

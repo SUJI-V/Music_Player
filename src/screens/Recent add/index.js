@@ -501,7 +501,7 @@ const styles = StyleSheet.create({
     borderColor: '#ffffffae',
   },
   Player: {
-    height: '80%',
+    height: '100%',
     width: '95%',
     //borderRadius:25,
     justifyContent: 'space-around',
