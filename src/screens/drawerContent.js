@@ -9,7 +9,7 @@ export function DrawerContent(props) {
   return (
     <View>
       <Drawer.Section
-        style={{backgroundColor: '#7697f4', height: '100%', paddingTop: '5%'}}>
+        style={{backgroundColor: '#376f8a88', height: '100%', paddingTop: '10%'}}>
         <DrawerItem
           onPress={() => {
             props.navigation.navigate('Home');
@@ -42,7 +42,7 @@ export function DrawerContent(props) {
           onPress={() => {
             props.navigation.navigate('Timer');
           }}
-          icon={({color, size}) => <Icon1 name="car" size={20} />}
+          icon={({color, size}) => <Icon name="power-sleep" size={20} />}
           label="Sleep Timer"
         />
         <DrawerItem
