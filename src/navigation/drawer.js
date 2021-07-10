@@ -19,6 +19,7 @@ import Hidden from '../components/hidden';
 import Themes from './themes';
 import Timer from '../components/timer';
 import Widget from '../components/widget';
+import { DrawerContent } from '../screens/drawerContent';
 const Drawer = createDrawerNavigator();
 
 // const HomeStackScreen = ({navigation})=>(
@@ -39,7 +40,7 @@ const Main = ({ navigation }) => {
     }
     return (
 
-        <Drawer.Navigator initialRouteName=""  headerMode={false} style={{backgroundColor:"grey"}}>
+        <Drawer.Navigator initialRouteName=""  headerMode={false} drawerContent={props => <DrawerContent {...props}/>}>
             <Drawer.Screen name="Home" component={HomeStack} options={{
                 headerLeft: () => (
                     <AntDesign name="search1" size={40} width={60} height={60} color="black" backgroundColor="red" onPress={() => navigation.navigate('stack')}></AntDesign>

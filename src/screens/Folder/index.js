@@ -178,36 +178,6 @@ const Folder = ({navigation}) => {
           style={{left: '90%', bottom: '60%',color:"#fff"}}
         />
       </View>
-      <View
-          style={{
-            width: 65,
-            height: 65,
-            borderRadius: 50,
-            top:"22%",
-            left:"80%",
-            backgroundColor: '#F4CE5E',
-            justifyContent: 'center',
-            alignContent: 'center',
-            alignItems: 'center',
-          }}>
-          <Icon1
-            name="shuffle"
-            size={30}
-            color="#fff"
-            onPress={() =>
-              ToastAndroid.show('Current Queue Shuffled!', ToastAndroid.SHORT)
-            }
-          />
-        </View>
-      <View style={styles.PlayerView}>
-          <View style={styles.Player}>
-            <Iconf name="music" size={30} color="#fff" />
-            <Text style={{color: '#fff', fontSize: 15}}>03-uyire.mp3</Text>
-            <IconM name="play-arrow" size={30} color="#fff" />
-            <IconM name="fast-forward" size={30} color="#fff" />
-            <IconM name="queue-music" size={30} color="#fff" />
-          </View>
-        </View>
     </View>
     </>
   );
