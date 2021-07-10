@@ -69,7 +69,7 @@ const Folder = ({navigation}) => {
             />
             <Icon1
               name="dots-three-vertical"
-              size={25}
+              size={20}
               color="#fff"
               style={{right: '5%'}}
               onPress={() => navigation.navigate('Ads')}
@@ -89,9 +89,9 @@ const Folder = ({navigation}) => {
             paddingLeft: '1.5%',
             color:"#fff"
           }}
-          onPress={() => navigation.navigate('Recent')}
         />
-        <Text style={{left: '20%', bottom: '21%', fontSize: 17,color:"#fff"}}>audio</Text>
+        <Text style={{left: '20%', bottom: '21%', fontSize: 17,color:"#fff"}} onPress={() => navigation.navigate('Recent')}
+>audio</Text>
         <Text style={{left: '20%', bottom: '25%',color:"#fff"}}>
           /storage/emu...Xender/audio
         </Text>
@@ -114,9 +114,9 @@ const Folder = ({navigation}) => {
             color:"#fff"
 
           }}
-          onPress={() => navigation.navigate('Favorite')}
         />
-        <Text style={{left: '20%', bottom: '21%', fontSize: 17,color:"#fff"}}>Download</Text>
+        <Text style={{left: '20%', bottom: '21%', fontSize: 17,color:"#fff"}}onPress={() => navigation.navigate('Favorite')}
+>Download</Text>
         <Text style={{left: '20%', bottom: '25%',color:"#fff"}}>
           /storage/emu...Xender/audio
         </Text>
@@ -139,9 +139,9 @@ const Folder = ({navigation}) => {
             color:"#fff"
 
           }}
-          onPress={() => navigation.navigate('Play')}
         />
-        <Text style={{left: '20%', bottom: '21%', fontSize: 17,color:"#fff"}}>Music</Text>
+        <Text style={{left: '20%', bottom: '21%', fontSize: 17,color:"#fff"}} onPress={() => navigation.navigate('Play')}
+>Music</Text>
         <Text style={{left: '20%', bottom: '25%',color:"#fff"}}>
           /storage/emu...Xender/audio
         </Text>
@@ -164,9 +164,9 @@ const Folder = ({navigation}) => {
             color:"#fff"
 
           }}
-          onPress={() => navigation.navigate('Whatsapp')}
         />
-        <Text style={{left: '20%', bottom: '21%', fontSize: 17,color:"#fff"}}>
+        <Text style={{left: '20%', bottom: '21%', fontSize: 17,color:"#fff"}}onPress={() => navigation.navigate('Whatsapp')}
+>
           Whatsapp Audio
         </Text>
         <Text style={{left: '20%', bottom: '25%',color:"#fff"}}>
@@ -178,36 +178,6 @@ const Folder = ({navigation}) => {
           style={{left: '90%', bottom: '60%',color:"#fff"}}
         />
       </View>
-      <View
-          style={{
-            width: 65,
-            height: 65,
-            borderRadius: 50,
-            top:"22%",
-            left:"80%",
-            backgroundColor: '#F4CE5E',
-            justifyContent: 'center',
-            alignContent: 'center',
-            alignItems: 'center',
-          }}>
-          <Icon1
-            name="shuffle"
-            size={30}
-            color="#fff"
-            onPress={() =>
-              ToastAndroid.show('Current Queue Shuffled!', ToastAndroid.SHORT)
-            }
-          />
-        </View>
-      <View style={styles.PlayerView}>
-          <View style={styles.Player}>
-            <Iconf name="music" size={30} color="#fff" />
-            <Text style={{color: '#fff', fontSize: 15}}>03-uyire.mp3</Text>
-            <IconM name="play-arrow" size={30} color="#fff" />
-            <IconM name="fast-forward" size={30} color="#fff" />
-            <IconM name="queue-music" size={30} color="#fff" />
-          </View>
-        </View>
     </View>
     </>
   );

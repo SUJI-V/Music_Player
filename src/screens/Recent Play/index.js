@@ -148,11 +148,11 @@ const Recent = ({navigation}) => {
               }}>
               <Icon1
                 name="gift"
-                size={30}
+                size={25}
                 color="#fff"
                 onPress={() => navigation.navigate('Ads')}
               />
-              <IconM name="search" size={30} color="#fff" />
+              <Icon1 name="search1" size={25} color="#fff" />
            </View>
           </View>
         </View>

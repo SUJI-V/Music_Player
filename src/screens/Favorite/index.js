@@ -58,6 +58,7 @@ const Fav = ({navigation}) => {
               alignContent: 'center',
               justifyContent: 'flex-end',
             }}>
+
             <View
               style={{
                 height: '100%',
@@ -83,6 +84,8 @@ const Fav = ({navigation}) => {
                 onPress={() => navigation.navigate('Ads')}
               />
             </View>
+
+  
           </View>
         </View>
        

@@ -70,13 +70,13 @@ const HomeScreen = () => {
             }}>
             <IconA
               name="gift"
-              size={30}
+              size={25}
               color="#fff"
               onPress={() => navigation.navigate('Ads')}
             />
-            <Icon
-              name="search"
-              size={30}
+            <IconA
+              name="search1"
+              size={25}
               color="#fff"
               onPress={() => navigation.navigate('Library')}
             />
