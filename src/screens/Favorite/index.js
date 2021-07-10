@@ -171,7 +171,7 @@ const styles = StyleSheet.create({
     height:35,
     borderWidth: 1,
     borderColor: '#fff',
-    paddingLeft: 20,
+    paddingLeft: 25,
     paddingTop:5
   },
   PlayerView: {

@@ -26,6 +26,7 @@ const HomeScreen = () => {
   const [modalOpen, setModalOpen] = useState(false);
   return (
     <View style={styles.container}>
+      
       <Image
         source={require('../assets/bg5.jpg')}
         style={{position: 'absolute', width: '100%', height: '100%'}}
@@ -193,6 +194,7 @@ const HomeScreen = () => {
       </View>
 
       <Modal visible={modalOpen} animationType="slide" transparent={true}>
+     
         <TouchableOpacity
           style={styles.ModalRow1}
           onPress={() => setModalOpen(false)}></TouchableOpacity>
@@ -297,6 +299,7 @@ const HomeScreen = () => {
         <TouchableOpacity
           style={styles.ModalRow3}
           onPress={() => setModalOpen(false)}></TouchableOpacity>
+         
       </Modal>
 
       <View style={styles.row3}>
@@ -348,6 +351,7 @@ const HomeScreen = () => {
           <Icon name="queue-music" size={30} color="#fff" />
         </View>
       </View>
+     
     </View>
   );
 };
