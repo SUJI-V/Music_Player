@@ -100,7 +100,7 @@ const Fav = ({navigation}) => {
         <View style={{height:"15%",width:"100%", justifyContent:"center",alignItems:"center"}}>
                  <TouchableOpacity
           style={styles.toucable}
-          onPress={() => navigation.navigate('Recent')}>
+          onPress={() => navigation.navigate('Library')}>
           <Text  style={{color:"#fff"}}>Add songs</Text>
         </TouchableOpacity>
         </View>

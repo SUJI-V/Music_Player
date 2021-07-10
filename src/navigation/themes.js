@@ -14,10 +14,7 @@ import Icon2 from 'react-native-vector-icons/Entypo';
 const Themes = ({navigation}) => {
   return (
     <>
-      <Image
-        style={{height: '100%', width: '100%', position: 'absolute'}}
-        source={require('../assets/RecentBg.jpg')}
-      />
+      
       <View
         style={{
           height: '8%',
@@ -26,7 +23,7 @@ const Themes = ({navigation}) => {
           alignContent: 'center',
           justifyContent: 'space-around',
           alignItems: 'center',
-          backgroundColor: '#376f8aef',
+          backgroundColor: '#376f8aff',
           opacity: 0.7,
         }}>
         <AntDesign
@@ -78,7 +75,7 @@ const Themes = ({navigation}) => {
       <View
         style={{
           height: '92%',
-          backgroundColor: '#376f8aaa',
+          backgroundColor: '#376f8a55',
           justifyContent: 'space-around',
         }}>
         <View style={styles.row1}>

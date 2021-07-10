@@ -13,7 +13,7 @@ export function DrawerContent(props) {
         source={require('../assets/bg4.jpg')}
       />
       <Drawer.Section style={{backgroundColor: 'grey',position: "absolute",width:"100%",height:"10%",opacity: .6,}}>
-      <Text style={{color:"red",fontStyle:"italic",fontSize:40,}}>Music Player</Text>
+      <Text style={{color:"red",fontStyle:"italic",fontSize:40,fontWeight:"bold"}}>Music Player</Text>
         <Image
                 style={{position: 'absolute', width: '100%', height: '100%'}}
         source={require('../assets/bg4.jpg')} />

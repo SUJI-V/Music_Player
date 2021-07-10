@@ -12,7 +12,7 @@ const Scan = ({navigation}) => {
     <>
        <Image
         style={{height: '100%', width: '100%', position:"absolute"}}
-        source={require('../assets/RecentBg.jpg')}
+        source={require('../assets/bg5.jpg')}
       />
       <View
         style={{
@@ -94,17 +94,19 @@ const Scan = ({navigation}) => {
         <TouchableOpacity
           style={{
             borderWidth: 2,
-            borderColor: '#FFD700',
+            borderColor: '#f4ce5e',
             width: '78%',
             top: '20%',
             marginLeft: '12%',
-            paddingLeft: '10%',
+           // paddingLeft: '10%',
             borderRadius: 10,
             height: '7%',
-            paddingTop: '3.5%',
+            //paddingTop: '3.5%',
+            justifyContent:"center",
+            alignItems:"center",
           }}
           onPress={() => navigation.navigate('Library')}>
-          <Text style={{left: '28%', top: '10%',fontWeight:"bold"}}>Start scan</Text>
+          <Text style={{fontWeight:"bold"}}>Start scan</Text>
         </TouchableOpacity>
       </View>
     </>

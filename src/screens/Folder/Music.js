@@ -18,7 +18,7 @@ import {
 
 
        
-        const music = ({navigation}) => {
+        const Music = ({navigation}) => {
           const [modalOpen, setModalOpen] = useState(false);
           return (
             <>
@@ -127,7 +127,7 @@ import {
                       fontSize: 20,
                       marginTop: '1%',
                     }}>
-                    Music
+                   Music
                   </Text>
                   <View
                     style={{
@@ -400,7 +400,7 @@ import {
     
         
         
-export default music;
+export default Music;
 
 const styles = StyleSheet.create({
     container: {

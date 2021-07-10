@@ -26,7 +26,7 @@ const Recentadd = ({navigation}) => {
 
         <View style={styles.modalViewBottom}>
           <View style={styles.ModalHeaderView}>
-            <Text style={styles.ModalHeaderText}>Audio file.mp4</Text>
+            <Text style={styles.ModalHeaderText}>Folder</Text>
           </View>
           <View style={styles.modalIconsContainer}>
             <View style={{flexDirection: 'row'}}>
