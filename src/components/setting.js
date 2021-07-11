@@ -62,7 +62,7 @@ const Setting = ({navigation}) => {
             fontSize: 15,
             color: '#fff',
           }}>
-          Home
+          Settings
         </Text>
         <AntDesign
           name="search1"

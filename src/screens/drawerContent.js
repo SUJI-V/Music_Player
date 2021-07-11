@@ -12,13 +12,15 @@ export function DrawerContent(props) {
         style={{position: 'absolute', width: '100%', height: '100%'}}
         source={require('../assets/bg1.jpg')}
       />
-      <Drawer.Section style={{backgroundColor: 'grey',position: "absolute",width:"100%",height:"10%",opacity: .4,}}>
-      <Text style={{color:"black",fontStyle:"italic",fontSize:40,left:"10%",fontWeight:"bold"}}>Music Player</Text>
+      <Drawer.Section style={{backgroundColor: 'grey',position: "absolute",width:"100%",height:"10%",opacity: .6,}}>
+      <Text style={{color:"red",fontStyle:"italic",fontSize:40,fontWeight:"bold"}}>Music Player</Text>
         <Image
                 style={{position: 'absolute', width: '100%', height: '100%'}}
         source={require('../assets/bg3.jpg')} />
       </Drawer.Section>
       <Drawer.Section
+
+
         style={{
           height: '100%',
           paddingTop: '25%',
@@ -27,6 +29,7 @@ export function DrawerContent(props) {
           paddingLeft:"1%",
           color:"#fff"
         }}>
+
         <DrawerItem
           onPress={() => {
             props.navigation.navigate('Home');
@@ -60,7 +63,7 @@ export function DrawerContent(props) {
           onPress={() => {
             props.navigation.navigate('Timer');
           }}
-          icon={({color, size}) => <Icon1 name="car" size={20} />}
+          icon={({color, size}) => <Icon name="power-sleep" size={20} />}
           label="Sleep Timer"
         />
         <DrawerItem

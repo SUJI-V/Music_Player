@@ -8,7 +8,7 @@ import aa from '../screens/Recent Play/index';
 import bb from '../screens/Recent add/index';
 import cc from '../screens/Most play/index';
 import dd from '../screens/Folder/download';
-import ee from '../screens/Folder/download';
+import Music from '../screens/Folder/Music';
 import gg from '../components/setting';
 import ModalStack from '../components/modal1';
 import audio from '../screens/Folder/audio';
@@ -43,7 +43,7 @@ const HomeStack =({navigation}) => {
       <Stack.Screen name="Most Play" component={cc} />
       <Stack.Screen name="Audio" component={audio}/>
       <Stack.Screen name="Download" component={dd}/>
-      <Stack.Screen name="Music" component={ee}/>
+      <Stack.Screen name="Music" component={Music}/>
       <Stack.Screen name="Ads" component={Ads} />
       <Stack.Screen name="Settings" component={gg} />
       <Stack.Screen name="Recent" component={hh} />
