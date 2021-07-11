@@ -133,7 +133,7 @@ const Ads = ({navigation}) => {
             }}
           />
           <Text style={{left: 205, top: -95, fontSize: 12}}>
-            Weather Forecast
+             Forecast
           </Text>
           <Image
             source={require('../assets/ads/pics.jpg')}
