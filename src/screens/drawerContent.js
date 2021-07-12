@@ -25,6 +25,7 @@ export function DrawerContent(props) {
           opacity: 0.5,
           backgroundColor: '#6FB2DC',
           paddingLeft:"1%",
+
         }}>
         <DrawerItem
           onPress={() => {
