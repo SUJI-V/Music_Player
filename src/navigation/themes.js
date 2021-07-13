@@ -23,12 +23,12 @@ const Themes = ({navigation}) => {
           alignContent: 'center',
           justifyContent: 'space-around',
           alignItems: 'center',
-          backgroundColor: '#376f8aff',
-          opacity: 0.7,
+          backgroundColor: '#376f8aef',
+          //opacity: 0.7,
         }}>
         <AntDesign
           name="arrowleft"
-          size={30}
+          size={25}
           color="#fff"
           style={{width: '10%'}}
           onPress={() => navigation.goBack()}
@@ -39,7 +39,7 @@ const Themes = ({navigation}) => {
             fontFamily: 'italic',
             fontWeight: 'bold',
             fontSize: 20,
-            marginTop: '1%',
+//marginTop: '1%',
           }}>
           Themes
         </Text>
@@ -75,7 +75,7 @@ const Themes = ({navigation}) => {
       <View
         style={{
           height: '92%',
-          backgroundColor: '#376f8a55',
+          backgroundColor: '#376f8aaa',
           justifyContent: 'space-around',
         }}>
         <View style={styles.row1}>
