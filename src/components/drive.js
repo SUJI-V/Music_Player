@@ -36,9 +36,10 @@ const Drive = ({navigation}) => {
             borderWidth: 2,
             borderColor: '#fff',
             width: '25%',
-            paddingLeft: 25,
+           justifyContent:"center",
+           alignItems:"center",
             height: 35,
-            paddingTop: 7,
+            //paddingTop: 7,
             right: '60%',
           }}
           onPress={() => navigation.navigate('Home')}>
@@ -48,11 +49,13 @@ const Drive = ({navigation}) => {
           style={{
             borderWidth: 2,
             borderColor: '#fff',
-            width: '20%',
-            paddingLeft: 25,
+            width: '25%',
+            //paddingLeft: 25,
             backgroundColor: '#7797F5',
             left: '80%',
-            paddingTop: 7,
+            height: 35,
+            justifyContent:"center",
+            alignItems:"center",
           }}
           onPress={() => navigation.navigate('Library')}>
           <Text>OK</Text>
