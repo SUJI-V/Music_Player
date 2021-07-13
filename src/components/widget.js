@@ -26,7 +26,7 @@ const Widget = ({navigation}) => {
     alignItems:"center",
     backgroundColor: '#376f8aef',
     opacity:.7}}>
-                <IconA  name="arrowleft" size={30} color="#fff"  style={{width:"10%",}}  onPress={() => navigation.goBack()} />
+                <IconA  name="arrowleft" size={25} color="#fff"  style={{width:"10%",}}  onPress={() => navigation.goBack()} />
                 <Text style={{color:"#fff", fontFamily: "italic", fontWeight: "bold", fontSize: 20,marginTop:"1%" }}>Widget</Text>
 <View style={{height:"100%",width:"60%",flexDirection:"row", flexWrap:"wrap", alignContent:"center",justifyContent:"flex-end",}}>
 <View style={{height:"100%",width:"43%",flexDirection:"row", flexWrap:"wrap",alignItems:"center", alignContent:"center",justifyContent:"flex-end", }}>

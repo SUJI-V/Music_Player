@@ -399,7 +399,7 @@ const styles = StyleSheet.create({
   container: {
     paddingTop: '0.1%',
     paddingBottom: '0.1%',
-    paddingLeft: '8%',
+    paddingLeft: '3%',
     borderBottomWidth: 1,
     borderColor: 'grey',
     flexDirection: 'row',
@@ -429,12 +429,12 @@ const styles = StyleSheet.create({
     marginBottom: '2.5%',
   },
   dotIcon: {
-    padding: 10,
-    marginLeft: '89%',
+    marginLeft: '93%',
     marginTop: '2.5%',
     color: 'white',
     width: '15%',
     position: 'absolute',
+    alignSelf:"center"
   },
   modalViewTop: {
     height: '60%',

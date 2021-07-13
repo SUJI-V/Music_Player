@@ -112,11 +112,13 @@ const styles = StyleSheet.create({
   container: {
     paddingTop: '0.1%',
     paddingBottom: '0.1%',
-    paddingLeft: '8%',
+    paddingLeft: '3%',
     borderBottomWidth: 1,
     borderColor: 'grey',
     flexDirection: 'row',
     alignItems: 'flex-start',
+    alignContent:"center"
+   
   },
   menubar: {
     height: '8%',
@@ -150,12 +152,11 @@ const styles = StyleSheet.create({
     marginBottom: '2.5%',
   },
   dotIcon: {
-    padding: 10,
-    marginLeft: '89%',
-    marginTop: '2.5%',
+    marginLeft: '93%',
     color: 'white',
     width: '15%',
     position: 'absolute',
+    alignSelf:"center"
   },
   modalViewTop: {
     height: '60%',
@@ -1166,7 +1167,7 @@ function Genres() {
 
         <View style={styles.modalViewBottom}>
           <View style={styles.ModalHeaderView}>
-            <Text style={styles.ModalHeaderText}>Genere</Text>
+            <Text style={styles.ModalHeaderText}>Genres</Text>
           </View>
           <View style={styles.modalIconsContainer}>
             <View style={{flexDirection: 'row'}}>

@@ -9,6 +9,8 @@ import {
   Image,
   Modal,
   StyleSheet,
+  TextInput,
+  ToastAndroid,
 } from 'react-native';
 import {CheckBox} from 'react-native-elements';
 import Icon from 'react-native-vector-icons/MaterialIcons';
@@ -16,286 +18,349 @@ import AntDesign from 'react-native-vector-icons/AntDesign';
 import {Divider} from 'react-native-paper';
 const Setting = ({navigation}) => {
   const [checkboxValue, setcheckboxValue] = useState(false);
-  const [isEnabled, setIsEnabled] = useState(false);
-  const toggleSwitch = () => setIsEnabled(previousState => !previousState);
-  const [isDisabled, setIsDisabled] = useState(true);
-  const toggleSwitch1 = () => setIsDisabled(previousState => !previousState);
-  const [main, setmain] = useState(false);
-  const toggleSwitch3 = () => setmain(previousState => !previousState);
-  const [value, setvalue] = useState(false);
-  const toggleSwitch2 = () => setvalue(previousState => !previousState);
-  const [first, setFirst] = useState(false);
-  const toggleSwitch4 = () => setFirst(previousState => !previousState);
-  const [two, settwo] = useState(false);
-  const toggleSwitch0 = () => settwo(previousState => !previousState);
-  const [inserted, setinserted] = useState(false);
-  const toggleSwitch5 = () => setinserted(previousState => !previousState);
-  const [select, setselect] = useState(true);
-  const toggleSwitch6 = () => setselect(previousState => !previousState);
   const [modalOpen, setModalOpen] = useState(false);
+  const [isEnabled, setIsEnabled] = useState(false);
+
+  const toggleSwitch = () => setIsDisabled(previousState => !previousState);
+  const [isDisabled, setIsDisabled] = useState(false);
+
+  const toggleSwitch1 = () => setIsDisabled1(previousState => !previousState);
+  const [isDisabled1, setIsDisabled1] = useState(false);
+
+  const toggleSwitch2 = () => setIsDisabled2(previousState => !previousState);
+  const [isDisabled2, setIsDisabled2] = useState(false);
+
+  const toggleSwitch3 = () => setIsDisabled3(previousState => !previousState);
+  const [isDisabled3, setIsDisabled3] = useState(false);
+  
+  const toggleSwitch4 = () => setIsDisabled4(previousState => !previousState);
+  const [isDisabled4, setIsDisabled4] = useState(false);
+
+  const toggleSwitch5 = () => setIsDisabled5(previousState => !previousState);
+  const [isDisabled5, setIsDisabled5] = useState(false);
+
+  const toggleSwitch6 = () => setIsDisabled6(previousState => !previousState);
+  const [isDisabled6, setIsDisabled6] = useState(false);
+
+  const toggleSwitch7 = () => setIsDisabled7(previousState => !previousState);
+  const [isDisabled7, setIsDisabled7] = useState(false);
+
+ 
   return (
     <>
       <Image
         style={{height: '100%', width: '100%', position: 'absolute'}}
         source={require('../assets/bg3.jpg')}
       />
-      <Modal visible={modalOpen} animationType="slide" transparent={false}>
-        <View style={styles.centeredView}>
-          <View style={styles.modalView}>
-            <Text>12 hours</Text>
-            <Text>24 hours</Text>
-          </View>
-        </View>
-      </Modal>
-      <View style={{height: 30, backgroundColor: '#0890B6', height: '7%'}}>
-        <AntDesign
-          name="arrowleft"
-          size={25}
-          style={{left: 10, top: 15, color: '#fff'}}
-          onPress={() => navigation.goBack()}
-        />
-        <Text
+       <Modal visible={modalOpen} animationType="fade" transparent={true}>
+     
+     <TouchableOpacity
+       style={styles.ModalRow1}
+       onPress={() => setModalOpen(false)}></TouchableOpacity>
+     <View style={styles.ModalRow2}>
+       <TouchableOpacity
+         style={{height: '100%', width: '10%'}}
+         onPress={() => setModalOpen(false)}></TouchableOpacity>
+
+       <View
+         style={{
+           height: '100%',
+           width: '80%',
+           backgroundColor: '#ffffff',}}>
+         
+        
+        <TouchableOpacity onPress={() => setModalOpen(false)}
+         style={{
+           height: '50%',
+           width: '100%',
+           borderBottomWidth:1,
+           borderColor:"white",
+           justifyContent:"center",
+           alignItems:"flex-start",
+           paddingLeft:"10%",
+           }}>
+<Text>
+  12 hours
+</Text>
+             </TouchableOpacity>
+            
+             <TouchableOpacity onPress={() => setModalOpen(false)}
+         style={{
+           height: '50%',
+           width: '100%',
+           justifyContent:"center",
+           alignItems:"flex-start",
+           paddingLeft:"10%",
+           }}>
+
+<Text>
+  24 hours
+</Text>            
+</TouchableOpacity>
+       </View>
+
+       <TouchableOpacity
+         style={{height: '100%', width: '10%'}}
+         onPress={() => setModalOpen(false)}></TouchableOpacity>
+     </View>
+
+     <TouchableOpacity
+       style={styles.ModalRow3}
+       onPress={() => setModalOpen(false)}></TouchableOpacity>
+      
+   </Modal>
+      
+   <View
           style={{
-            fontWeight: 'bold',
-            left: 55,
-            top: -8,
-            fontSize: 15,
-            color: '#fff',
+            height: '8%',
+            flexDirection: 'row',
+            flexWrap: 'wrap',
+            alignContent: 'center',
+            justifyContent: 'space-around',
+            alignItems: 'center',
+            backgroundColor: '#376f8aef',
           }}>
-          Settings
-        </Text>
-        <AntDesign
-          name="search1"
-          size={22}
-          style={{left: 320, top: -27, color: '#fff'}}
-        />
-      </View>
-      <ScrollView style={{height: '100%'}}>
-        <View
-          style={{backgroundColor: '#C2E2EF', height: '100%', opacity: 0.7}}>
+          <AntDesign
+            name="arrowleft"
+            size={25}
+            style={{left: '5%', top: '1%', color: '#fff'}}
+            onPress={() => navigation.goBack()}
+          />
           <Text
             style={{
-              color: '#FFD700',
-              top: 20,
-              paddingLeft: 20,
-              backgroundColor: '#7E9BF2',
-              marginBottom: 40,
+              color: '#fff',
+              fontFamily: 'italic',
+              fontWeight: 'bold',
+              fontSize: 20,
+              marginTop: '1%',
             }}>
-            Normal Settings
+          Settings
           </Text>
-          <View style={{bottom: '2%', right: '2%'}}>
-            <Text style={{top: 25, left: 20, fontSize: 14}}>Desktop Irc</Text>
-            <Text style={{top: 25, left: 20, fontSize: 13}}>
-              Desktop Lyrics closed
-            </Text>
-            <Switch
-              style={{bottom: '15%'}}
-              trackColor={{false: '#767577', true: '#FFD700'}}
-              thumbColor={isEnabled ? '#FFD700' : '#f4f3f4'}
-              ios_backgroundColor="#3e3e3e"
-              onValueChange={toggleSwitch}
-              value={isEnabled}
-            />
+          <View
+            style={{
+              height: '100%',
+              width: '40%',
+              flexDirection: 'row',
+              flexWrap: 'wrap',
+              alignContent: 'center',
+              justifyContent: 'flex-end',
+            }}>
+            <View
+              style={{
+                height: '100%',
+                width: '100%',
+                flexDirection: 'row',
+                flexWrap: 'wrap',
+                alignItems:"center", alignContent:"center",justifyContent:"flex-end",
+              }}>
+              
+              <AntDesign
+                name="search1" size={25} color="#fff"   onPress={() => navigation.navigate('Library')}/>
+            </View>
           </View>
-          <Divider style={{backgroundColor: '#fff', bottom: '1%'}} />
-          <View style={{bottom: '2%', right: '2%'}}>
-            <Text style={{top: 30, left: 20}}>Lock screen playing</Text>
-            <Text style={{top: 32, left: 20, fontSize: 13}}>
-              Show nowplaying when lock screen
-            </Text>
+        </View>
+
+  
+      <ScrollView style={{height: '92%',backgroundColor: '#376f8aaa',}}>
+
+        <View style={styles.headings} >
+          <Text style={{ color: '#FFDD00', fontWeight:"bold", }}> Normal Settings
+          </Text>
+        </View>
+          <View style={styles.container}>
+          <View style={styles.TextView}>
+          <Text style={styles.TextStyles}>Desktop Lyrics</Text>
+          <Text style={styles.TextStyles}>Desktop Lyrics closed</Text>
+            </View>
+            <View style={styles.SwitchView}>
             <Switch
-              style={{bottom: '13%'}}
               trackColor={{false: '#767577', true: '#FFD700'}}
-              thumbColor={isEnabled ? '#FFD700' : '#f4f3f4'}
+              thumbColor={isDisabled ? '#FFD700' : '#f4f3f4'}
               ios_backgroundColor="#3e3e3e"
               onValueChange={toggleSwitch1}
-              value={isDisabled}
+              value={isDisabled1}
             />
+            </View>
           </View>
-          <Divider style={{backgroundColor: '#fff', bottom: '1%'}} />
-          <View style={{bottom: '2%', right: '2%'}}>
-            <Text style={{left: 20, top: 23}}>Volume fade in and fade out</Text>
-            <Text style={{top: 25, left: 20, fontSize: 13}}>
-              Switch songs, the volume smooth transition
-            </Text>
+          
+          
+          <View style={styles.container}>
+          <View style={styles.TextView}>
+          <Text style={styles.TextStyles}>Lock screen playing</Text>
+          <Text style={styles.TextStyles}>show now playing when lock screen</Text>
+            </View>
+            <View style={styles.SwitchView}>
             <Switch
-              style={{bottom: '13%'}}
               trackColor={{false: '#767577', true: '#FFD700'}}
-              thumbColor={main ? '#FFD700' : '#f4f3f4'}
-              ios_backgroundColor="#3e3e3e"
-              onValueChange={toggleSwitch3}
-              value={main}
-            />
-          </View>
-          <Divider style={{backgroundColor: '#fff', bottom: '1%'}} />
-          <View style={{bottom: '2%', right: '2%'}}>
-            <Text style={{left: 20, top: 23}}>Change song by shaking</Text>
-            <Text style={{left: 20, top: 23, fontSize: 13}}>
-              Shake to next song
-            </Text>
-            <Switch
-              style={{bottom: '18%'}}
-              trackColor={{false: '#767577', true: '#FFD700'}}
-              thumbColor={value ? '#FFD700' : '#f4f3f4'}
+              thumbColor={ isDisabled2? '#FFD700' : '#f4f3f4'}
               ios_backgroundColor="#3e3e3e"
               onValueChange={toggleSwitch2}
-              value={value}
+              value={isDisabled2}
             />
+            </View>
           </View>
-          <Divider style={{backgroundColor: '#fff', bottom: '1%'}} />
-          <View style={{bottom: '2%', right: '2%'}}>
-            <Text style={{left: 20, top: 23}}>Open now playing on play</Text>
-            <Text style={{left: 22, top: 23, fontSize: 13}}>
-              If this option is enable, click song will enter now {'\n'} palying
-              page.
-            </Text>
-            <Switch
-              style={{bottom: '33%'}}
-              trackColor={{false: '#767577', true: '#FFD700'}}
-              thumbColor={first ? '#FFD700' : '#f4f3f4'}
-              ios_backgroundColor="#3e3e3e"
-              onValueChange={toggleSwitch4}
-              value={first}
-            />
-          </View>
-          <Divider style={{backgroundColor: '#fff', bottom: '1%'}} />
-          <View style={{bottom: '2%', right: '2%'}}>
-            <Text style={{left: 20, top: 23}}>
-              Click tracks add to current que
-            </Text>
-            <Text style={{left: 20, top: 23, fontSize: 13}}>
-              Click one song will only add the song into current{'\n'}que, will
-              not add/change other songs in current{'\n'}que.
-            </Text>
-            <Switch
-              style={{bottom: '50%'}}
-              trackColor={{false: '#767577', true: '#FFD700'}}
-              thumbColor={two ? '#FFD700' : '#f4f3f4'}
-              ios_backgroundColor="#3e3e3e"
-              onValueChange={toggleSwitch0}
-              value={two}
-            />
-          </View>
-          <Divider style={{backgroundColor: '#fff', bottom: '1%'}} />
-          <View style={{bottom: '1%', right: '2%'}}>
-            <Text style={{left: 25, fontSize: 15, top: 15}}>
-              Show shuffle button
-            </Text>
-            <Text style={{top: 20, left: 25}}>
-              Custom shuffle button show on list pages or not.
-            </Text>
+          
+          <View style={styles.container}>
+          <View style={styles.TextView}>
+          <Text style={styles.TextStyles}>Show Shuffle button</Text>
+          <Text style={styles.TextStyles}>Show custom shuffle button</Text>
+            </View>
+            <View style={styles.SwitchView}>
             <CheckBox
-              containerStyle={{
-                marginLeft: 0,
-                width: '100%',
-                left: '88%',
-                bottom: '42.5%',
-              }}
+            
               checked={checkboxValue}
               onPress={() => setcheckboxValue(!checkboxValue)}
             />
+            </View>
           </View>
-          <Divider style={{backgroundColor: '#fff', bottom: '3%'}} />
-          <View style={{bottom: '2%', right: '2%'}}>
-            <Text style={{top: 10, left: 20}}>Time format</Text>
-            <Text style={{top: 10, left: 20, fontSize: 13}}>
-              Choose 12/24h time format on lock screen page clock
-            </Text>
-            <TouchableOpacity>
-              <Icon
+          
+          
+          <TouchableOpacity style={styles.container} onPress={() => setModalOpen(true)}>
+          <View style={styles.TextView}>
+          <Text style={styles.TextStyles}>Lock screen Time Format</Text>
+          <Text style={styles.TextStyles}>12 Hours/24 Hours</Text>
+            </View>
+            <View style={styles.SwitchView}>
+            <Icon
                 name="arrow-right"
                 size={30}
-                style={{left: '90%', bottom: '90%'}}
-              onPress={()=>navigation.navigate('Home')}/>
-            </TouchableOpacity>
-          </View>
-          <Divider style={{backgroundColor: '#fff', bottom: '2%'}} />
-          <View style={{bottom: '.5%', right: '2%'}}>
-            <Text style={{left: '5%', top: '1%'}}>
-              Smart playlist track limit
-            </Text>
-            <Text style={{left: '5%', top: 5, fontSize: 13}}>
-              Set the limit number for the Recent play& Recent{'\n'}add& Most
-              play
-            </Text>
-            <Text style={{left: '85%', top: -45}}> No limit</Text>
-          </View>
-          <Divider style={{backgroundColor: '#fff', bottom: '1%'}} />
-          <View style={{height: 100}}>
-            <Text
-              style={{
-                color: '#FFD700',
-                paddingLeft: 20,
-                marginTop: 10,
-                backgroundColor: '#7E9BF2',
-              }}>
-              Headset Settings
-            </Text>
-          </View>
-          <View style={{top: '.5%', right: '2%'}}>
-            <Text style={{left: 20, top: -60}}>Play when inserted</Text>
-            <Text style={{left: 20, top: -55, fontSize: 13}}>
-              Auto start playing when a wired headset is inserted
-            </Text>
-            <Divider style={{backgroundColor: '#fff', bottom: '85%'}} />
+                
+              />
+            </View>
+          </TouchableOpacity>
+          
+          
+          <View style={styles.headings} >
+          <Text style={{ color: '#FFDD00', fontWeight:"bold", }}> Audio Settings
+          </Text>
+        </View>
+
+        <View style={styles.container}>
+          <View style={styles.TextView}>
+          <Text style={styles.TextStyles}>Volume Fade in and fade out</Text>
+          
+            </View>
+            <View style={styles.SwitchView}>
             <Switch
-              style={{top: -90}}
               trackColor={{false: '#767577', true: '#FFD700'}}
-              thumbColor={inserted ? '#FFD700' : '#f4f3f4'}
+              thumbColor={isDisabled3? '#FFD700' : '#f4f3f4'}
+              ios_backgroundColor="#3e3e3e"
+              onValueChange={toggleSwitch3}
+              value={isDisabled3}
+            />
+            </View>
+          </View>
+          
+          <View style={styles.container}>
+          <View style={styles.TextView}>
+          <Text style={styles.TextStyles}>Shake To Play Next Song</Text>
+         
+            </View>
+            <View style={styles.SwitchView}>
+            <Switch
+              trackColor={{false: '#767577', true: '#FFD700'}}
+              thumbColor={isDisabled4 ? '#FFD700' : '#f4f3f4'}
+              ios_backgroundColor="#3e3e3e"
+              onValueChange={toggleSwitch4}
+              value={isDisabled4}
+            />
+            </View>
+          </View>
+          
+          <View style={styles.container}>
+          <View style={styles.TextView}>
+          <Text style={styles.TextStyles}>Open nowplaying on play</Text>
+          <Text style={styles.TextStyles}>click tracks to open nowplaying songs</Text>
+            </View>
+            <View style={styles.SwitchView}>
+            <Switch
+              trackColor={{false: '#767577', true: '#FFD700'}}
+              thumbColor={isDisabled5 ? '#FFD700' : '#f4f3f4'}
               ios_backgroundColor="#3e3e3e"
               onValueChange={toggleSwitch5}
-              value={inserted}
+              value={isDisabled5}
             />
+            </View>
           </View>
-          <View style={{bottom: '.5%', right: '2%'}}>
-            <Text style={{left: 20, top: -50}}>Paused when unplugged</Text>
-            <Text style={{left: 20, top: -50, fontSize: 13}}>
-              Auto stop playing when a wired Headset is unplugged
-            </Text>
+          
+          <View style={styles.container}>
+          <View style={styles.TextView}>
+          <Text style={styles.TextStyles}>Replay the song</Text>
+          <Text style={styles.TextStyles}>Replay when click the current playing song</Text>
+            </View>
+            <View style={styles.SwitchView}>
             <Switch
-              style={{top: -90}}
               trackColor={{false: '#767577', true: '#FFD700'}}
-              thumbColor={select ? '#FFD700' : '#f4f3f4'}
+              thumbColor={isDisabled6 ? '#FFD700' : '#f4f3f4'}
               ios_backgroundColor="#3e3e3e"
               onValueChange={toggleSwitch6}
-              value={select}
+              value={isDisabled6}
             />
+            </View>
           </View>
-          <View style={{height: 100}}>
-            <Text
-              style={{
-                color: '#FFD700',
-                top: -60,
-                paddingLeft: 20,
-                backgroundColor: '#7E9BF2',
-              }}>
-              Others
-            </Text>
-          </View>
-          <TouchableOpacity>
-            <Text style={{left: 20, top: -120, fontWeight: 'bold'}}>
-              Stop Ads
-            </Text>
-          </TouchableOpacity>
-          <Divider style={{backgroundColor: '#fff', bottom: '6%'}} />
-          <Pressable>
-            <Text style={{left: 20, top: -90, fontWeight: 'bold'}}>
-              Rate for us
-            </Text>
-          </Pressable>
-          <Divider style={{backgroundColor: '#fff', bottom: '11.8%'}} />
-          <TouchableOpacity>
-            <Text style={{left: 20, top: -60, fontWeight: 'bold'}}>
-              Share to my friends
-            </Text>
-          </TouchableOpacity>
-          <Divider style={{backgroundColor: '#fff', bottom: '4%'}} />
+         
+
+
+
+        <View style={styles.headings} >
+          <Text style={{ color: '#FFDD00', fontWeight:"bold", }}> Playlist Settings
+          </Text>
         </View>
+
+        <View style={styles.headings} >
+          <Text style={{ color: '#FFDD00', fontWeight:"bold", }}> Headset Settings
+          </Text>
+        </View>
+        <View style={styles.headings} >
+          <Text style={{ color: '#FFDD00', fontWeight:"bold", }}> Others
+          </Text>
+        </View>
+
       </ScrollView>
     </>
   );
 };
 const styles = StyleSheet.create({
+    container: {
+      width: '100%',
+      height:80,
+      paddingLeft: '5%',
+      flexDirection: 'row',
+     alignItems: 'center',
+     justifyContent: 'space-between',
+      borderBottomWidth:1,
+      borderColor:"#FFFFFF"
+      
+    },
+    headings:{
+      justifyContent:"center",
+      alignItems:"flex-start",
+      height:"6%",
+      paddingLeft:"5%",
+    },
+    sections:{
+      backgroundColor: '#ffffff10',
+      marginBottom:"5%",
+    },
+    TextView:{
+height:"100%",
+borderWidth:1,
+borderColor:"red",
+width:"80%",
+alignItems:"flex-start",
+justifyContent:"center",
+    },
+    SwitchView:{
+      height:"100%",
+      borderWidth:1,
+      borderColor:"red",
+      width:"20%",
+      alignItems:"center",
+justifyContent:"center",
+    },
+    TextStyles:{
+      color:"#FFFFFF"},
+
   centeredView: {
     flex: 1,
     justifyContent: 'center',
@@ -309,6 +374,23 @@ const styles = StyleSheet.create({
     height: '20%',
     backgroundColor: '#fff',
     padding: 30,
+  },
+  ModalRow1: {
+    width: '100%',
+    height: '30%',
+    //position:"absolute",
+  },
+  ModalRow2: {
+    width: '100%',
+    height: 140,
+
+    flexDirection: 'row',
+  },
+  ModalRow3: {
+    width: '100%',
+    height: '45%',
+    
+   // position:"absolute",
   },
 });
 export default Setting;

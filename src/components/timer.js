@@ -17,7 +17,7 @@ const Timer = ({navigation}) => {
   const [isEnabled, setIsEnabled] = useState(false);
   const toggleSwitch = () => setIsEnabled(previousState => !previousState);
   return (
-    <View style={{flex: 1, backgroundColor: 'grey'}}>
+    <View style={{flex: 1,}}>
       <Image
         source={require('../assets/sleeptimerBg.jpg')}
         style={{position: 'absolute', width: '100%', height: '100%'}}
@@ -26,7 +26,7 @@ const Timer = ({navigation}) => {
      <View style={styles.menubar}>
      <IconA name="arrowleft" size={25} style={{color: '#fff'}} onPress={() => navigation.goBack()}/>
                 <Text style={{color:"#fff", fontFamily: "italic", fontWeight: "bold", fontSize: 20,}}>Sleep Timer</Text>
-<View style={{height:"100%",width:"55%",flexDirection:"row", flexWrap:"wrap", alignContent:"center",justifyContent:"flex-end",}}>
+<View style={{height:"100%",width:"40%",flexDirection:"row", flexWrap:"wrap", alignContent:"center",justifyContent:"flex-end",}}>
 <View style={{height:"100%",width:"60%",flexDirection:"row", flexWrap:"wrap",alignItems:"center", alignContent:"center",justifyContent:"space-between", }}>
                
                 </View>
@@ -147,7 +147,7 @@ const styles = StyleSheet.create({
     paddingLeft: '5%',
     paddingRight:"5%",
     flexDirection: 'row',
-    alignItems: 'flex-start',
+    alignItems: 'center',
     justifyContent: 'space-between',
     backgroundColor: '#ffffff10',
   },
@@ -156,7 +156,7 @@ const styles = StyleSheet.create({
     flexDirection:"row",
     flexWrap:"wrap",
     alignContent:"center",
-    justifyContent:"space-between",
+    justifyContent:"space-around",
     alignItems:"center",
    // paddingTop:"5%",
     backgroundColor: '#376f8aef'
@@ -167,19 +167,23 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
   },
   BottomView: {
-    marginTop: '8%',
+    marginTop: '6%',
     justifyContent: 'space-between',
+    paddingTop: '0.8%',
+    paddingBottom: '0.8%',
   },
   TextStyle: {
     color: 'white',
     fontSize: 17,
-    paddingTop: '1%',
+    //paddingTop: '1%',
+   // textAlignVertical:'center',
   },
   TextStyle1: {
     color: 'white',
     fontSize: 10,
-    paddingTop: '1%',
+   // paddingTop: '2%',
     paddingRight: '1%',
+    textAlignVertical:'center',
   },
   input: {
     borderBottomWidth: 1,
@@ -190,7 +194,7 @@ const styles = StyleSheet.create({
     paddingBottom: 0,
   },
   LabelStyle: {
-    paddingTop: '3%',
+   // paddingTop: '3%',
   },
 });
 export default Timer;
