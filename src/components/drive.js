@@ -6,59 +6,57 @@ const Drive = ({navigation}) => {
     <View
       style={{
         flex: 1,
-        backgroundColor: 'grey',
-        justifyContent: 'flex-start',
-        alignSelf: 'auto',
+   
+    backgroundColor:'#566573',
       }}>
-      <AntDesign
-        name="arrowleft"
-        size={25}
-        style={{left: 10, top: 15, color: '#fff'}}
-        onPress={() => navigation.goBack()}
-      />
+      <View style={{width:"100%",height:"50%",justifyContent:"flex-end",alignItems:"center"}}>
       <Image
         source={require('../assets/ads/trafic.png')}
-        style={{height: '10%', width: '40%', left: '32%', top: '20%'}}
+        style={{width:300,height:200}}
       />
-      <Text style={{color: '#fff', left: '20%', top: '30%', fontSize: 15}}>
-        Safety first! Please follow the traffic{'\n'}regulations while driving.,
-        and cherish your{'\n'}and other's life!
+      </View>
+      <View style={{width:"100%",height:"15%",justifyContent:"flex-end",alignItems:"center"}}>
+      <Text style={{color: '#fff', fontSize: 16}}>
+        Safety first! Please follow the traffic regulations {'\n'} {'\n'}while driving.,
+        and cherish your and other's life!
       </Text>
+      </View>
       <View
         style={{
           justifyContent: 'flex-start',
           alignSelf: 'center',
           flexDirection: 'row',
-          marginTop: '80%',
+          height:"20%",
+          width:"100%",
+          justifyContent:"space-around",
+          alignItems:"center",
         }}>
+
+
         <TouchableOpacity
           style={{
-            borderWidth: 2,
-            borderColor: '#fff',
-            width: '25%',
+           backgroundColor:"#BEBCBB",
+            width: 125,
            justifyContent:"center",
            alignItems:"center",
             height: 35,
             //paddingTop: 7,
-            right: '60%',
+            
           }}
           onPress={() => navigation.navigate('Home')}>
-          <Text>Cancel</Text>
+          <Text style={{color: '#fff',}}>Cancel</Text>
         </TouchableOpacity>
         <TouchableOpacity
           style={{
-            borderWidth: 2,
-            borderColor: '#fff',
-            width: '25%',
+            width: 125,
             //paddingLeft: 25,
-            backgroundColor: '#7797F5',
-            left: '80%',
+            backgroundColor: '#24a0ed',
             height: 35,
             justifyContent:"center",
             alignItems:"center",
           }}
           onPress={() => navigation.navigate('Library')}>
-          <Text>OK</Text>
+          <Text style={{color:"#fff"}}>OK</Text>
         </TouchableOpacity>
       </View>
     </View>
