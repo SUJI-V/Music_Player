@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
-import {View, Text, Image, TouchableOpacity, ScrollView} from 'react-native';
+import {View, Text, Image, TouchableOpacity,Pressable, ScrollView} from 'react-native';
 import {CheckBox} from 'react-native-elements';
-import Icon from 'react-native-vector-icons/FontAwesome';
+import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 const Scan = ({navigation}) => {
   const [checkboxValue, setcheckboxValue] = useState(false);
@@ -12,102 +12,150 @@ const Scan = ({navigation}) => {
     <>
        <Image
         style={{height: '100%', width: '100%', position:"absolute"}}
-        source={require('../assets/bg5.jpg')}
+        source={require('../assets/themes/six.jpg')}
       />
       <View
         style={{
-          backgroundColor: 'skyblue',
+          backgroundColor: '#376f8aaa',
           height: '100%',
           flexDirection: 'column',
-          opacity:.7
+          
         }}>
-        <View style={{backgroundColor: '#0890B6', height: '6%'}}>
+            <View
+          style={{
+            height: '8%',
+            flexDirection: 'row',
+            flexWrap: 'wrap',
+            alignContent: 'center',
+            justifyContent: 'space-around',
+            alignItems: 'center',
+            backgroundColor: '#376f8aef',
+          }}>
           <AntDesign
             name="arrowleft"
-            size={20}
-            style={{left: '2%', top: "23%", color: '#fff'}}
+            size={25}
+            color="#fff"
+            style={{width: '10%'}}
             onPress={() => navigation.goBack()}
           />
           <Text
             style={{
-              left: '15%',
-              bottom: "25.5%",
-              fontSize: 16,
-              fontWeight: 'bold',
               color: '#fff',
+              fontFamily: 'italic',
+              fontWeight: 'bold',
+              fontSize: 20,
+              marginTop: '1%',
             }}>
-            Scan Libraries
+         Scan Library
           </Text>
-          <Icon
+          <View
+            style={{
+              height: '100%',
+              width: '20%',
+              flexDirection: 'row',
+              flexWrap: 'wrap',
+              alignContent: 'center',
+              justifyContent: 'flex-end',
+              
+            }}>
+
+            <View
+              style={{
+                height: '100%',
+                width: '100%',
+                flexDirection: 'row',
+                flexWrap: 'wrap',
+                alignItems: 'center',
+                alignContent: 'center',
+                justifyContent: 'flex-end',
+              }}>
+              
+            <Pressable  onPress={() => navigation.navigate('Library')}>
+              <FontAwesome
             name="folder-open"
-            size={20}
-            style={{left: '92%', bottom: "69%", color: '#fff'}}
-            onPress={() => navigation.navigate('Library')}
-          />
+              size={25}
+              style={{
+                color: '#fff',
+               
+              }}
+             
+            />
+          </Pressable>
+            </View>
+            </View>  
         </View>
+
+ 
         <Image
-          source={require('../assets/loading-34.gif')}
-          style={{left: '19.5%', height: '25%', width: '60%', top: 100}}
+          source={require('../assets/Scanner3.gif')}
+          style={{height:"40%", width:"70%",alignSelf:"center"}}
         />
-        <Text style={{left: '23%', top: '17%', fontSize: 15}}>
+        
+        <View style={{height:"60%",alignItems:'center',paddingTop:"5%",}}>
+        <Text style={{ fontSize: 16,color:"#fff", alignSelf:"center",}}>
           Tracks:10 Albums:33 Artists:20
         </Text>
+        <View style={{width:"100%",flexDirection:"row",paddingLeft:"10%", alignItems:"center",marginTop:"5%",}}>
         <CheckBox
           containerStyle={{
-            marginLeft: 0,
-            width: '100%',
-            left: '10%',
-            top: '27%',
+            width: '10%',
           }}
           checked={checkboxValue}
           onPress={() => setcheckboxValue(!checkboxValue)}
+          checkedColor='#F8E910'
         />
-        <Text style={{left: '24%', top: '22%'}}>
+        <Text style={{color:"#fff",alignItems:'center',justifyContent:"center", }}>
           Exclude songs less than{' '}
-          <Text style={{textDecorationLine: 'underline'}}>60</Text> seconds.
+          <Text style={{textDecorationLine: 'underline', color:"#fff"}}>60</Text> seconds.
         </Text>
+
+        </View>
+        <View style={{paddingLeft:"10%",width:"100%",flexDirection:"row",alignItems:"center"}}>
         <CheckBox
           containerStyle={{
-            marginLeft: 0,
-            width: '100%',
-            left: '10%',
-            top: '21.9%',
+            width: '10%',
           }}
           checked={newValue}
           onPress={() => setNewValue(!newValue)}
+          checkedColor='#F8E910'
         />
-        <Text style={{left: '24%', top: '17%'}}>
+         <Text style={{color:"#fff",alignItems:'center',justifyContent:"center", }}>
           Exclude songs less than{' '}
-          <Text style={{textDecorationLine: 'underline'}}>50Kb</Text>
+          <Text style={{color:"#fff",textDecorationLine:'underline'}}>50Kb</Text>
         </Text>
+
+        </View>
+
+        <View style={{paddingLeft:"10%",width:"100%",flexDirection:"row",alignItems:"center"}}>
         <CheckBox
           containerStyle={{
-            marginLeft: 0,
-            width: '100%',
-            left: '10%',
-            top: '16.8%',
+            width: '10%',
+         
           }}
           checked={value}
           onPress={() => setValue(!value)}
+          checkedColor='#F8E910'
         />
-        <Text style={{left: '24%', top: '12%'}}>Exclude Ringtone</Text>
+       <Text style={{color:"#fff",alignItems:'center',justifyContent:"center",}}>
+         Exclude Ringtone
+         </Text>
+
+       </View>
         <TouchableOpacity
           style={{
             borderWidth: 2,
             borderColor: '#f4ce5e',
             width: '78%',
-            top: '20%',
-            marginLeft: '12%',
-           // paddingLeft: '10%',
             borderRadius: 10,
-            height: '7%',
-            //paddingTop: '3.5%',
+            height: 50,
             justifyContent:"center",
             alignItems:"center",
+            marginTop:"10%",
           }}
           onPress={() => navigation.navigate('Library')}>
-          <Text style={{fontWeight:"bold"}}>Start scan</Text>
+          <Text style={{fontWeight:"bold",color:"#fff"}}>Start scan</Text>
         </TouchableOpacity>
+      </View>
       </View>
     </>
   );
