@@ -34,6 +34,7 @@ const Widget = ({navigation}) => {
                 </View>
                 </View>
             </View>
+      
       <View style={styles.row1}>
         <View style={styles.box1}>
         <Image
