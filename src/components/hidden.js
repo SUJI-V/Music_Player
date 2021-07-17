@@ -75,12 +75,17 @@ const Hidden = ({navigation}) => {
               name="check"
               size={25}
               style={{color: '#fff',}}
-              onPress={() =>
-                ToastAndroid.show(
+              onPress={() => {(checkboxValue2||checkboxValue1)?
+                (ToastAndroid.show(
+                  'Sucessfully Hidden',
+                  ToastAndroid.SHORT,
+                )) 
+                :
+                (ToastAndroid.show(
                   'Please select a folder to hide!!',
                   ToastAndroid.SHORT,
-                )
-              }
+                )) 
+              }}
             />
             </View>
 
