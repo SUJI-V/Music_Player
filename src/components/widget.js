@@ -7,8 +7,8 @@ import {
   TextInput,
   StyleSheet,
 } from 'react-native';
-import Icon from 'react-native-vector-icons/FontAwesome';
-import IconM from 'react-native-vector-icons/MaterialIcons';
+//import Icon from 'react-native-vector-icons/FontAwesome';
+//import IconM from 'react-native-vector-icons/MaterialIcons';
 import IconA from 'react-native-vector-icons/AntDesign';
 const Widget = ({navigation}) => {
   return (
@@ -17,24 +17,57 @@ const Widget = ({navigation}) => {
       style={{height: '100%', width: '100%', position: 'absolute'}}
       source={require('../assets/bg3.jpg')}
     />
-    <View style={{flex: 1, backgroundColor: '#376f8aaa'}}>
-     <View style={{ height:"8%",
-    flexDirection:"row",
-    flexWrap:"wrap",
-    alignContent:"center",
-    justifyContent:"space-around",
-    alignItems:"center",
-    backgroundColor: '#376f8aef',
-    opacity:.7}}>
-                <IconA  name="arrowleft" size={25} color="#fff"  style={{width:"10%",}}  onPress={() => navigation.goBack()} />
-                <Text style={{color:"#fff", fontFamily: "italic", fontWeight: "bold", fontSize: 20,marginTop:"1%" }}>Widget</Text>
-<View style={{height:"100%",width:"60%",flexDirection:"row", flexWrap:"wrap", alignContent:"center",justifyContent:"flex-end",}}>
-<View style={{height:"100%",width:"43%",flexDirection:"row", flexWrap:"wrap",alignItems:"center", alignContent:"center",justifyContent:"flex-end", }}>
-                <IconA name="gift" size={30} color="#fff"  onPress={() => navigation.navigate('Ads')} />
-                </View>
-                </View>
+     <View
+          style={{
+            height: '8%',
+            flexDirection: 'row',
+            flexWrap: 'wrap',
+            alignContent: 'center',
+            justifyContent: 'space-around',
+            alignItems: 'center',
+            backgroundColor: '#376f8aef',
+          }}>
+          <IconA
+            name="arrowleft"
+            size={25}
+            style={{left: '5%', top: '1%', color: '#fff'}}
+            onPress={() => navigation.goBack()}
+          />
+          <Text
+            style={{
+              color: '#fff',
+              fontFamily: 'italic',
+              fontWeight: 'bold',
+              fontSize: 20,
+              marginTop: '1%',
+            }}>
+          Widgets
+          </Text>
+          <View
+            style={{
+              height: '100%',
+              width: '40%',
+              flexDirection: 'row',
+              flexWrap: 'wrap',
+              alignContent: 'center',
+              justifyContent: 'flex-end',
+            }}>
+            <View
+              style={{
+                height: '100%',
+                width: '100%',
+                flexDirection: 'row',
+                flexWrap: 'wrap',
+                alignItems:"center", alignContent:"center",justifyContent:"flex-end",
+              }}>
+              
+              <IconA
+                name="gift" size={25} color="#fff"    onPress={() => navigation.navigate('Ads')}/>
             </View>
-      
+          </View>
+        </View>
+    <View style={{height:"100%", backgroundColor: '#376f8aaa'}}>
+    
       <View style={styles.row1}>
         <View style={styles.box1}>
         <Image
